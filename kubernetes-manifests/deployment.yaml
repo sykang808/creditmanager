@@ -1,10 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: creditmanager
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: creditmanager
+  namespace: creditmanager
   labels:
     app: creditmanager
-  namespace: default
 spec:
   selector:
     matchLabels:
@@ -23,6 +28,9 @@ spec:
       - image: 566034038752.dkr.ecr.us-west-2.amazonaws.com/sykang/creditmanager:latest
         imagePullPolicy: Always
         name: creditmanager
+        ports:
+        - containerPort: 80
+          protocol: TCP
 ---          
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
