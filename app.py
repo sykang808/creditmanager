@@ -1,12 +1,11 @@
 from kafka import KafkaConsumer 
 from kafka import KafkaProducer 
-from json import loads 
-from json import dumps 
-import requests
 import threading
 import json
+import random
 import boto3
 from botocore.config import Config
+from json import dumps
 #from aws_xray_sdk.core import xray_recorder
 #from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
 
