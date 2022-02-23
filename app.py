@@ -95,10 +95,3 @@ if __name__ == '__main__':
 #   app.run(host="0.0.0.0", port=5052,debug=True)
     productmanager1 = CreditManager()
     productmanager1.register_kafka_listener('creditkafka')
-    productmanager2 = CreditManager()
-    productmanager2.register_kafka_listener('creditkafka')
-    productmanager3 = CreditManager()
-    productmanager3.register_kafka_listener('creditkafka')
-    productmanager4 = CreditManager()
-    productmanager4.register_kafka_listener('creditkafka')
-
